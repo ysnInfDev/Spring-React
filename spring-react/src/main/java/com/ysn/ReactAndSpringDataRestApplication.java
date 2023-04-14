@@ -15,20 +15,18 @@
  */
 package com.ysn;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * @author Greg Turnquist
  */
 // tag::code[]
-@Controller // <1>
-public class HomeController {
+@SpringBootApplication
+public class ReactAndSpringDataRestApplication {
 
-	@RequestMapping(value = "/") // <2>
-	public String index() {
-		return "index"; // <3>
+	public static void main(String[] args) {
+		SpringApplication.run(ReactAndSpringDataRestApplication.class, args);
 	}
-
 }
 // end::code[]
